@@ -63,7 +63,7 @@ int main()
 
     if(score[1]>score[0])
     {
-        printf("\nA é o vencedor! O prêmio fica por conta do Layhon!\n");
+        printf("\nA é o vencedor! O prêmio fica por conta do professor!\n");
     }
     else if(score[0]>score[1])
     {
@@ -95,23 +95,16 @@ int find (int n,int a[12])
     }  
 }
 
-int points(int n)
-{
-    if(n==3)
-    {
-        return 10;
-    }
-    else if(n==2)
-    {
-        return 7;
-    }
-    else if(n==1)
-    {
-        return 5;
-    }
-    else
-    {
-        return 0;
+int points(int n) {
+    switch (n) {
+        case 3:
+            return 10;
+        case 2:
+            return 7;
+        case 1:
+            return 5;
+        default:
+            return 0;
     }
 }
 
